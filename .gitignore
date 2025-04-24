@@ -1,1 +1,25 @@
 /logs/
+/docs/
+
+# Ignore environment configs
+.env
+.env.*
+
+# Ignore wp-config.php
+/wp-config.php
+
+# Ignore OS junk files
+.DS_Store
+Thumbs.db
+
+# WordPress core files that shouldn't be versioned (if not tracking core)
+public/wp-content/cache/
+
+# IDE/editor files
+.idea/
+.vscode/
+*.log
+
+# Composer & vendor (if using phpdotenv via Composer)
+vendor/
+composer.lock

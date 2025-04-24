@@ -1,0 +1,17 @@
+{
+    "name": "mitchumgroup/avancesports",
+    "autoload": {
+        "psr-4": {
+            "Mitchumgroup\\Avancesports\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marc F. Spina",
+            "email": "mfs@mitchumgroup.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
