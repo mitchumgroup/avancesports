@@ -29,7 +29,7 @@ body {
 }
 
 .html-block {
-  padding: 3rem 0 !important; /* Top/Bottom padding */
+  padding: 4rem 0 !important; /* Top/Bottom padding */
 }
 
 /* ≤ 1300px: Reduce left/right padding */
@@ -455,3 +455,145 @@ footer a:hover {
   }
 }
 
+/* PAGE HEADER BACKGROUND */
+/* Apply this class to the Spectra Container block */
+.page-header-bg {
+  background-image: url('/wp-content/uploads/2025/05/header-bg-blue.jpg');
+  background-size: 100% auto; /* Scale to 100% width, auto height (clips vertically) */
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* Removed min-height: 500px; Height is now determined by content + padding */
+  width: 100%; /* Should be handled by Spectra Full-Width setting */
+  /* Spectra Container settings will handle padding (set to 0) and vertical alignment */
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 768px) {
+  .page-header-bg {
+     background-size: cover; /* Ensure background covers the container on mobile */
+  }
+  /* Override the general mobile padding for .html-block specifically in the header */
+  .page-header-bg .html-block {
+       padding-left: 1rem !important; /* Add some padding back for the header */
+       padding-right: 1rem !important;
+       /* Keep existing top/bottom padding from .html-block */
+  }
+}
+
+/* The .html-block padding and responsive padding rules for > 768px remain the same */
+/* .html-block { padding: 3rem 0 !important; ... } */
+/* @media (max-width: 1300px) { .html-block { padding-left: 2.5rem !important; ... } } */
+
+
+/* ABOUT TWO-COLUMN LAYOUT */
+
+/* Utility to remove italic style */
+.not-italic {
+  font-style: normal !important; /* Use !important to ensure override */
+}
+
+/* Apply padding to the content column */
+.html-block .col.content-col {
+  padding: 0 2rem; /* 2rem left/right padding */
+  box-sizing: border-box; /* Include padding in element's total width/height */
+}
+
+/* Adjust padding for smaller mobile screens */
+@media (max-width: 768px) {
+  .html-block .col.content-col {
+      padding: 0 1rem; /* Adjust padding for smaller mobile screens */
+  }
+  /* Ensure text is left-aligned in content column on mobile */
+  /* This is already handled by the general mobile rule for .content-col */
+  /* .html-block .col.content-col { text-align: left; } */
+}
+
+
+.down-arrow-img {
+  max-width: 20%; /* Constraint size */
+  height: auto;
+  display: block; /* Allows margin: auto for centering */
+  margin: 2rem auto; /* Center horizontally and add vertical space */
+}
+
+
+
+/* Update the w-66-desktop utility class */
+.w-66-desktop {
+  max-width: 66%;
+  /* REMOVED: margin: 0 auto; */ /* Remove centering */
+}
+
+/* Mobile adjustment for w-66-desktop remains the same */
+@media (max-width: 768px) {
+  .w-66-desktop {
+      max-width: 100%; /* Full width on mobile */
+  }
+}
+
+
+
+/* Styling for the Mission points block */
+.mission-points-list {
+margin-top: 1.5rem; /* Space above the list */
+}
+
+/* Wrapper for each individual mission point text block */
+.mission-point-wrapper {
+position: relative; /* Needed for absolute positioning of the pseudo-element */
+padding:2rem 1rem;
+/* The padding-left for the text content will be applied to the <p> inside */
+}
+
+/* Remove bottom margin from the last mission point wrapper */
+.mission-points-list .mission-point-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+
+/* The blue left bar - applied to the wrapper */
+.mission-point-wrapper::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; /* Position at the left edge of the .mission-point-wrapper */
+  width: 1.25rem; /* Width of the blue bar - adjust as needed */
+  background-color: var(--clr-accent-400); /* Default main blue color */
+}
+
+/* Modifier class for the lighter blue bar on the Education point */
+.mission-point-wrapper-education::before {
+  background-color: var(--clr-accent-300); /* Lighter blue override */
+}
+
+/* Style the paragraph content INSIDE the mission point wrapper */
+.mission-point-wrapper p {
+  padding-left: 2rem; /* Inner padding for the text content, makes space for the bar */
+  margin-bottom: 0; /* Remove default paragraph bottom margin within the wrapper */
+}
+
+
+/* Color for the bold text (ADVOCACY, EDUCATION, MENTORSHIP) */
+/* Target strong tags specifically within the mission points list */
+.mission-points-list strong {
+  color: var(--clr-accent-400); /* Main blue color */
+}
+
+
+/* Adjustments for mobile */
+@media (max-width: 768px) {
+   .mission-points-list {
+      margin-top: 1rem; /* Adjust margin on mobile */
+   }
+   .mission-point-wrapper {
+      margin-bottom: 0.75rem; /* Adjust space between points on mobile */
+   }
+   .mission-point-wrapper::before {
+       display: none; /* Hide the blue bar on mobile */
+   }
+   .mission-point-wrapper p {
+      padding-left: 0; /* Remove left padding on mobile */
+   }
+   /* Bold text color remains the same */
+}
