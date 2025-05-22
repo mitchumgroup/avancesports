@@ -87,15 +87,28 @@ https://www.avancesports.org/press/avance-the-association-for-the-advancement-of
 
 PUBLICATIONS
 
+## REPORT 1
+
+IMAGE URL: /wp-content/uploads/2025/05/report-cover.jpg
 THE ECONOMIC IMPACT OF LATINO NBA FANS
 FULL REPORT
-https://cdn.prod.website-files.com/664784713ccb5d07c1052afb/66c44a3c0fb5948da5fbb410_AVANCE_Full_Report.pdf
+/wp-content/uploads/2025/05/AVANCE_Full_Report.pdf
+
+EXECUTIVE SUMMARY
+/wp-content/uploads/2025/05/AVANCE_Executive_Summary.pdf
 
 
+## REPORT 2
+
+IMAGE URL: /wp-content/uploads/2025/05/neilsen-cover.jpg
 GAME CHANGER: THE POWER OF LATINO FANDOM
 FULL REPORT
+/wp-content/uploads/2025/05/Game-Changer-LiS-Nielsen-Report-090424.pdf
 
 
+## REPORT 3
+
+IMAGE URL: /wp-content/uploads/2025/05/fba_infographic.jpg
 BAIN & COMPANY | Scoring Big with Latino Sports Fans Infographic
 VIEW INFOGRAPHIC
 https://www.bain.com/insights/scoring-big-with-latino-sports-fans-infographic/

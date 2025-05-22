@@ -403,6 +403,248 @@ footer a:hover {
   margin-top: 2rem;
 }
 
+/* CONTACT FORM 7 STYLING */
+
+/* Form styling */
+.wpcf7 {
+  width: 50%;
+  max-width: 600px;
+  margin: 0 0 2rem 0; /* Left-aligned */
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  float: left; /* Force left alignment */
+  clear: both;
+  display: block;
+}
+
+/* Form wrapper - inside the form */
+.wpcf7 form .contact-form-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* Form heading */
+.contact-form-heading,
+.wpcf7 h2,
+.contact-form-wrapper h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff !important;
+  line-height: 1.2;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Form inputs */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 input[type="url"],
+.wpcf7 textarea {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #00bcf3;
+  color: #ffffff; /* Ensure text is white */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 1; /* Ensure text is fully visible */
+}
+
+/* Textarea height */
+.wpcf7 textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Focus states */
+.wpcf7 input:focus,
+.wpcf7 textarea:focus {
+  outline: none;
+  border-color: #0080ff;
+  box-shadow: 0 1px 0 0 rgba(0, 128, 255, 0.5);
+  background-color: rgba(0, 128, 255, 0.05);
+}
+
+/* Placeholder text */
+.wpcf7 input::placeholder,
+.wpcf7 textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Fix for text color in WebKit browsers */
+.wpcf7 input:-webkit-autofill,
+.wpcf7 input:-webkit-autofill:hover, 
+.wpcf7 input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.wpcf7 input:focus::placeholder,
+.wpcf7 textarea:focus::placeholder {
+  opacity: 0.5;
+}
+
+/* Submit button */
+.wpcf7 input[type="submit"] {
+  background-color: #0080ff;
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 128, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.wpcf7 input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  border: 1px solid #000000;
+}
+
+/* Form paragraphs */
+.wpcf7-form p {
+  margin-bottom: 1.25rem;
+}
+
+/* Remove extra space from <br> tags */
+.wpcf7-form br {
+  display: none;
+}
+
+/* Error messages */
+.wpcf7-not-valid-tip {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.wpcf7 .wpcf7-not-valid {
+  border-color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.05);
+}
+
+.wpcf7-response-output {
+  margin: 1.5rem 0 0 !important;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #0080ff !important;
+  color: #ffffff !important;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  background-color: rgba(0, 128, 255, 0.1);
+  font-weight: 500;
+}
+
+/* Create a split row for email and phone */
+.wpcf7 .split-row {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  align-items: flex-start; /* Align items at the top */
+}
+
+.wpcf7 .split-row p {
+  flex: 1;
+  width: 50%;
+  margin: 0;
+  position: relative;
+}
+
+/* Ensure inputs in split row are aligned */
+.wpcf7 .split-row input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 42px; /* Set fixed height for better alignment */
+}
+
+/* Add subtle divider between split fields */
+.wpcf7 .split-row p:first-child::after {
+  content: '';
+  position: absolute;
+  right: -0.75rem;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background-color: rgba(0, 188, 243, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .wpcf7 {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wpcf7 {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .wpcf7 .split-row {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .wpcf7 .split-row p {
+    width: 100%;
+  }
+  
+  /* Remove the divider in mobile view */
+  .wpcf7 .split-row p:first-child::after {
+    display: none;
+  }
+  
+  .contact-heading {
+    font-size: 1.5rem;
+  }
+  
+  .contact-form-heading {
+    font-size: 1.5rem;
+  }
+  
+  .wpcf7 input[type="submit"] {
+    width: 100%;
+    padding: 0.85rem 1rem;
+  }
+}
+
+
 .partners-logos img {
   max-width: 300px;
   height: auto;
@@ -810,4 +1052,586 @@ padding:2rem 1rem;
 
 nav.navigation.post-navigation{
   display: none !important
+}
+
+/* PUBLICATIONS GRID STYLES */
+.html-block .publications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.html-block .publication-item {
+  background-color: var(--clr-primary-100);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.html-block .publication-thumbnail {
+  position: relative;
+  background-color: var(--clr-primary-900);
+  overflow: hidden;
+}
+
+.html-block .publication-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.html-block .publication-item:hover .publication-image {
+  transform: scale(1.05);
+}
+
+.html-block .publication-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.html-block .publication-title {
+  font-family: var(--ff-body);
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: normal;
+  color: var(--clr-primary-900);
+  margin-bottom: 1rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.html-block .publication-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.html-block .publication-link.btn.btn-primary {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .html-block .publications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .html-block .publication-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .html-block .publications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .html-block .publication-content {
+    padding: 1rem;
+  }
+  
+  .html-block .publication-title {
+    font-size: 1rem;
+  }
+}
+
+/* EVENTS SECTION STYLES */
+.html-block .events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Event Row Layout */
+.html-block .event-row {
+  display: flex;
+  gap: 2.5rem;
+  background-color: var(--clr-primary-100);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.html-block .event-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Date Column */
+.html-block .event-date-column {
+  flex: 0 0 30%;
+  max-width: 30%;
+  background-color: var(--clr-accent-400);
+  color: var(--clr-primary-100);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.html-block .event-date-wrapper {
+  width: 100%;
+}
+
+.html-block .event-date {
+  margin-bottom: 1.5rem;
+}
+
+.html-block .event-month-day {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.html-block .event-times {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.html-block .event-time {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.html-block .event-schedule-image {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.html-block .event-schedule-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Details Column */
+.html-block .event-details-column {
+  flex: 1;
+  padding: 2rem 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.html-block .event-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--clr-primary-900);
+  line-height: 1.2;
+}
+
+.html-block .event-featured-image {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.html-block .event-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.html-block .event-featured-image:hover .event-image {
+  transform: scale(1.03);
+}
+
+.html-block .event-location {
+  margin-bottom: 1.25rem;
+}
+
+.html-block .event-venue {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.html-block .event-address,
+.html-block .event-city-state {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.html-block .event-registration {
+  margin-bottom: 1.5rem;
+}
+
+.html-block .registration-fee {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--clr-accent-400);
+}
+
+.html-block .event-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.html-block .event-description p {
+  margin-bottom: 1rem;
+}
+
+.html-block .event-programs-list {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.html-block .event-programs-list li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.html-block .event-programs-list li::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0.5rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--clr-accent-400);
+}
+
+.html-block .event-cta {
+  margin-top: auto;
+}
+
+.html-block .event-cta .btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .html-block .event-date-column {
+    padding: 1.5rem;
+  }
+  
+  .html-block .event-details-column {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+  }
+  
+  .html-block .event-title {
+    font-size: 1.5rem;
+  }
+  
+  .html-block .event-month-day {
+    font-size: 1.3rem;
+  }
+  
+  .html-block .event-time {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .html-block .event-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .html-block .event-date-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .html-block .event-details-column {
+    padding: 1.5rem;
+  }
+  
+  .html-block .event-date {
+    margin-bottom: 1rem;
+  }
+  
+  .html-block .event-schedule-image {
+    max-width: 80%;
+    margin: 1rem auto 0;
+  }
+  
+  .html-block .event-title {
+    text-align: center;
+  }
+  
+  .html-block .event-location,
+  .html-block .event-registration {
+    text-align: center;
+  }
+  
+  .html-block .event-cta {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* CONTACT PAGE STYLES */
+.html-block .contact-container,
+.contact-form-container,
+.contact-info {
+  
+  display: flex;
+  flex-direction: column;
+  padding-top:1.5rem;
+  max-width:700px;
+  text-wrap:balance;
+  
+}
+
+/* Contact Info Section */
+.html-block .contact-info {
+  padding: 0 1rem;
+}
+
+.html-block .contact-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.html-block .contact-address {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  
+}
+
+.html-block .contact-address p {
+  margin-bottom: 0.5rem;
+}
+
+.html-block .contact-phone {
+  margin-top: 0.5rem;
+}
+
+.html-block .contact-email {
+  color: var(--clr-accent-400);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.html-block .contact-email:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form Section */
+.html-block .contact-form-wrapper,
+.wpcf7 {
+  background-color: var(--clr-primary-900);
+  color: var(--clr-primary-100);
+  padding: 2.5rem;
+  border-radius: 4px;
+  /* --- CASCADE: Align form to the left --- */
+  margin-left: 0;
+  margin-right: auto;
+  max-width: 550px; /* Adjust width as needed */
+  float: none; /* Override potential floats */
+  clear: both; /* Ensure it doesn't sit next to prior floated elements */
+  /* --- END CASCADE CHANGES --- */
+}
+
+.html-block .contact-form-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--clr-primary-100);
+}
+
+/* Form Styling - Will apply to Contact Form 7 */
+.html-block .contact-form .wpcf7-form,
+.html-block .contact-form-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.html-block .form-row {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.html-block .form-row-split {
+  display: flex;
+  gap: 1rem;
+}
+
+.html-block .form-input,
+.html-block .form-textarea,
+.html-block .contact-form input[type="text"],
+.html-block .contact-form input[type="email"],
+.html-block .contact-form input[type="tel"],
+.html-block .contact-form textarea,
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 input[type="url"],
+.wpcf7 textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--clr-accent-300);
+  color: #ffffff; /* -- CASCADE: Ensure input text is white -- */
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.html-block .form-textarea,
+.html-block .contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.html-block .form-input:focus,
+.html-block .form-textarea:focus,
+.html-block .contact-form input:focus,
+.html-block .contact-form textarea:focus,
+.wpcf7 input:focus,
+.wpcf7 textarea:focus {
+  outline: none;
+  border-color: var(--clr-accent-400);
+  color: #ffffff !important; /* -- CASCADE: Ensure input text is white on focus -- */
+}
+
+.html-block .form-input::placeholder,
+.html-block .form-textarea::placeholder,
+.html-block .contact-form input::placeholder,
+.html-block .contact-form textarea::placeholder,
+.wpcf7 input::placeholder,
+.wpcf7 textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.html-block .form-submit,
+.html-block .contact-form input[type="submit"],
+.wpcf7 input[type="submit"] {
+  background-color: var(--clr-accent-400);
+  color: var(--clr-primary-100);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+  display: inline-block;
+}
+
+.html-block .form-submit:hover,
+.html-block .contact-form input[type="submit"]:hover,
+.wpcf7 input[type="submit"]:hover {
+  background-color: #FFFFFF; /* Typo corrected */
+  border: none; /* Ensure no border is added on hover */
+}
+
+/* Contact Form 7 specific styles */
+.html-block .contact-form .wpcf7-form p,
+.wpcf7-form p {
+  margin-bottom: 1.25rem;
+}
+
+.html-block .contact-form .wpcf7-not-valid-tip,
+.wpcf7-not-valid-tip {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.html-block .contact-form .wpcf7-response-output,
+.wpcf7-response-output {
+  margin: 1rem 0 0 !important;
+  padding: 0.75rem !important;
+  border: 1px solid var(--clr-accent-400) !important;
+  color: var(--clr-primary-100) !important;
+  font-size: 0.9rem;
+}
+
+/* Additional styles for direct Contact Form 7 usage */
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Style the submit button container */
+.wpcf7-form p:last-of-type {
+  margin-top: 1rem;
+}
+
+/* Add styles for the form heading */
+.contact-form-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--clr-primary-100);
+}
+
+/* Create a split row for email and phone */
+.wpcf7-form .split-row {
+  display: flex;
+  gap: 1rem;
+  /* --- CASCADE: Align email/phone fields --- */
+  align-items: baseline; /* Align items based on their text baseline */
+  margin-bottom: 1.25rem; /* Maintain spacing with the element below */
+  /* --- END CASCADE CHANGES --- */
+}
+
+.wpcf7-form .split-row p {
+  flex: 1;
+  /* --- CASCADE: Adjust margins for alignment --- */
+  margin-top: 0;
+  margin-bottom: 0; /* Spacing is handled by the .split-row container */
+  /* --- END CASCADE CHANGES --- */
+}
+
+@media (max-width: 768px) {
+  .wpcf7-form .split-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .html-block .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+  
+  .html-block .form-row-split {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .html-block .contact-heading {
+    font-size: 1.5rem;
+  }
+  
+  .html-block .contact-form-heading {
+    font-size: 1.5rem;
+  }
 }

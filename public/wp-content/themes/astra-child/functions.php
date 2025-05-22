@@ -12,5 +12,3 @@ function enqueue_custom_fonts() {
     // Custom Google Fonts
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap', false );
 }
-
-
