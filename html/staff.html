@@ -1,0 +1,178 @@
+<!-- START OF STAFF TEAM SECTION -->
+<div class="html-block" data-section="staff"> <!-- Master wrapper for this entire block -->
+    <style type="text/css">
+    /* Modal styles are inherited from advisory.html */
+    
+    /* Staff-specific styles that override advisory styles */
+    /* Use a more specific selector to target only the staff section */
+    .html-block[data-section="staff"] .bod-content,
+    .html-block[data-section="staff"] .bod-content h3,
+    .html-block[data-section="staff"] .bod-content p {
+        color: #000000; /* Black text only for staff section */
+    }
+    </style>
+    
+    <!-- STAFF TEAM CONTENT -->
+    <div> 
+        <div class="center mb-6">
+          <h2 class="no-margin-bottom center">MEET THE TEAM</h2>
+          <h3 class="subhead fw-500 center ff-secondary mb-6">
+            Leading with vision and expertise to drive the success of AVANCE
+          </h3>
+        </div>
+    
+        <div class="bod-grid">
+            <!-- Staff members will be dynamically inserted here by JS, or you can hardcode -->
+            <!-- Example of hardcoded structure (JS will populate based on staffData): -->
+            <div class="bod-advisor" data-person-name="gary-acosta">
+                <img
+                    class="bod-image"
+                    src="/wp-content/uploads/2025/05/gary-acosta.jpg"
+                    alt="Gary Acosta"
+                />
+                <div class="bod-content">
+                    <h3 class="fw-500 ff-secondary text-uppercase center subhead mb-1">Gary Acosta</h3>
+                    <p class="center">
+                        <strong>Founder and Board Chairman</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bod-advisor" data-person-name="alex-martinez">
+                <img
+                    class="bod-image"
+                    src="/wp-content/uploads/2025/05/alex-martinez-gradient.jpg"
+                    alt="Alex Martinez"
+                />
+                <div class="bod-content">
+                    <h3 class="fw-500 ff-secondary text-uppercase center subhead mb-1">Alex Martinez</h3>
+                    <p class="center">
+                        <strong>Executive Director</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bod-advisor" data-person-name="hernan-olaya">
+                <img
+                    class="bod-image"
+                    src="/wp-content/uploads/2025/05/hernan-w.jpg"
+                    alt="Hernan Olaya"
+                />
+                <div class="bod-content">
+                    <h3 class="fw-500 ff-secondary text-uppercase center subhead mb-1">Hernan Olaya</h3>
+                    <p class="center">
+                        <strong>Director of Operations</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bod-advisor" data-person-name="armando-tam">
+                <img
+                    class="bod-image"
+                    src="/wp-content/uploads/2025/05/armando.jpg"
+                    alt="Armando Tam"
+                />
+                <div class="bod-content">
+                    <h3 class="fw-500 ff-secondary text-uppercase center subhead mb-1">Armando Tam</h3>
+                    <p class="center">
+                        <strong>Director of Marketing and Communications</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bod-advisor" data-person-name="daliah-acosta">
+                <img
+                    class="bod-image"
+                    src="/wp-content/uploads/2025/05/daliah.jpg"
+                    alt="Daliah Acosta"
+                />
+                <div class="bod-content">
+                    <h3 class="fw-500 ff-secondary text-uppercase center subhead mb-1">Daliah Acosta</h3>
+                    <p class="center">
+                        <strong>Director of Event Planning and Network Management</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- END OF .html-block -->
+
+
+<script>
+        const staffData = [
+            {
+                slug: "gary-acosta",
+                name: "Gary Acosta",
+                title: "Founder and Board Chairman",
+                bio: "Seasoned entrepreneur, public policy advocate, and investor with over 20 years of experience. He co-founded the National Association of Hispanic Real Estate Professionals (NAHREP), the largest Latino business organization in the U.S., and L’ATTITUDE, an event platform highlighting Latino achievements in various sectors. He is also a partner in L’ATTITUDE Ventures, a $100 million venture capital firm for Latino-led startups. Gary played college basketball under Hall of Fame Coach Gregg Popovich and is involved in AVANCE, driven by his passion for sports and promoting Latino success in the sports industry.",
+                imageUrl: "/wp-content/uploads/2025/05/gary-acosta.jpg"
+            },
+            {
+                slug: "alex-martinez",
+                name: "Alex Martinez",
+                title: "Executive Director",
+                bio: "Alex is responsible for advancing AVANCE’s strategic plan. He will represent AVANCE at various conferences, events, and community engagements to raise awareness and foster relationships with industry leaders, sports organizations, educational institutions, community partners and key stakeholders to promote AVANCE’s mission. He will have key oversight of AVANCE’s day-to-day operations and report regularly to the CEO and Board of Directors on performance and process. Previous to this role, Alex served as the Senior Director of Partnerships and Talent Innovation Programs at Nike where he led community foundation partnerships and talent programs with sports leagues, teams, signature athletes, and external organizations and strategic engagements.",
+                imageUrl: "/wp-content/uploads/2025/05/alex-martinez-gradient.jpg"
+            },
+            {
+                slug: "hernan-olaya",
+                name: "Hernan Olaya",
+                title: "Director of Operations",
+                bio: "Boasts extensive experience in sports management, business, coaching, and consulting. He is passionate about fostering the growth and development of Latino professionals in the sports industry. Hernan brings years of experience at the management level and in consulting. Before joining AVANCE, he spent six years as a scout and player development coach for the NBA in Latin America. During this time, he mentored several NBA players and refined his skills in strategic planning, operations, and player development.",
+                imageUrl: "/wp-content/uploads/2025/05/hernan-w.jpg"
+            },
+            {
+                slug: "armando-tam",
+                name: "Armando Tam",
+                title: "Director of Marketing and Communications",
+                bio: "Senior executive at NAHREP where he oversees digital marketing, chapter networks, and for-profit ventures. With a background in real estate and leadership development, Armando is passionate about advancing the economic mobility of Latinos in the United States and Latin America. His marketing skills help amplify Latino voices and contributions to American culture through platforms like AVANCE, NAHREP, and L’ATTITUDE.",
+                imageUrl: "/wp-content/uploads/2025/05/armando.jpg"
+            },
+            {
+                slug: "daliah-acosta",
+                name: "Daliah Acosta",
+                title: "Director of Event Planning and Network Management",
+                bio: "Responsible for managing membership and network development at AVANCE. With a strong background in business management and event planning, Daliah brings a wealth of experience and expertise to her role.",
+                imageUrl: "/wp-content/uploads/2025/05/daliah.jpg"
+            }
+        ];
+    
+        function showStaffBio(personName) {
+            const staffMember = staffData.find(s => s.slug === personName);
+            if (staffMember) {
+                const modalElement = document.getElementById('modal-staff');
+                if (!modalElement) {
+                    console.error("Modal element #modal-staff not found!");
+                    return;
+                }
+    
+                modalElement.querySelector('.ateam-name').textContent = staffMember.name;
+                modalElement.querySelector('.ateam-title').textContent = staffMember.title;
+                modalElement.querySelector('.ateam-bio').textContent = staffMember.bio;
+    
+                if (typeof openModal === 'function') {
+                    openModal('modal-staff');
+                } else {
+                    console.error("openModal function not found. Make sure advisory.html is loaded first.");
+                }
+            } else {
+                console.error("Staff member with slug '" + personName + "' not found in staffData.");
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            const staffMemberElements = document.querySelectorAll('.bod-advisor');
+            
+            staffMemberElements.forEach(function(element) {
+                element.addEventListener('click', function() {
+                    const personName = this.dataset.personName;
+                    if (personName) {
+                        showStaffBio(personName);
+                    } else {
+                        console.warn("Clicked staff element is missing 'data-person-name' attribute:", this);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- END OF STAFF TEAM SECTION -->

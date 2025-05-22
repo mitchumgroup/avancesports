@@ -461,7 +461,7 @@ footer a:hover {
   transition: all 0.3s ease;
   box-sizing: border-box;
   margin-bottom: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   opacity: 1; /* Ensure text is fully visible */
 }
 
@@ -490,7 +490,7 @@ footer a:hover {
 
 /* Fix for text color in WebKit browsers */
 .wpcf7 input:-webkit-autofill,
-.wpcf7 input:-webkit-autofill:hover, 
+.wpcf7 input:-webkit-autofill:hover,
 .wpcf7 input:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff;
   -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
@@ -517,7 +517,7 @@ footer a:hover {
   width: auto;
   display: inline-block;
   margin-top: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 4px rgba(0, 128, 255, 0.3);
   position: relative;
@@ -593,7 +593,7 @@ footer a:hover {
 
 /* Add subtle divider between split fields */
 .wpcf7 .split-row p:first-child::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -0.75rem;
   top: 25%;
@@ -615,35 +615,34 @@ footer a:hover {
     max-width: 100%;
     padding: 1.5rem;
   }
-  
+
   .wpcf7 .split-row {
     flex-direction: column;
     gap: 1.25rem;
   }
-  
+
   .wpcf7 .split-row p {
     width: 100%;
   }
-  
+
   /* Remove the divider in mobile view */
   .wpcf7 .split-row p:first-child::after {
     display: none;
   }
-  
+
   .contact-heading {
     font-size: 1.5rem;
   }
-  
+
   .contact-form-heading {
     font-size: 1.5rem;
   }
-  
+
   .wpcf7 input[type="submit"] {
     width: 100%;
     padding: 0.85rem 1rem;
   }
 }
-
 
 .partners-logos img {
   max-width: 300px;
@@ -658,6 +657,7 @@ footer a:hover {
   gap: 2rem;
   justify-content: center;
   align-items: stretch; /* Ensures equal height children */
+  margin-top: 4rem;
 }
 
 .bod-advisor {
@@ -674,6 +674,7 @@ footer a:hover {
   display: block;
   margin: 0 auto;
   flex-shrink: 0; /* prevent image from shrinking */
+  cursor: pointer;
 }
 
 .bod-content {
@@ -711,7 +712,7 @@ footer a:hover {
 /* Apply this class to the Spectra Container block */
 .page-header-bg {
   background-size: cover;
-  background-image: url('/wp-content/uploads/2025/05/header-bg-blue.jpg');
+  background-image: url("/wp-content/uploads/2025/05/header-bg-blue.jpg");
   /*background-size: 100% auto; /* Scale to 100% width, auto height (clips vertically) */
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -724,20 +725,19 @@ footer a:hover {
 /* Adjust padding for smaller screens */
 @media (max-width: 768px) {
   .page-header-bg {
-     background-size: cover; /* Ensure background covers the container on mobile */
+    background-size: cover; /* Ensure background covers the container on mobile */
   }
   /* Override the general mobile padding for .html-block specifically in the header */
   .page-header-bg .html-block {
-       padding-left: 1rem !important; /* Add some padding back for the header */
-       padding-right: 1rem !important;
-       /* Keep existing top/bottom padding from .html-block */
+    padding-left: 1rem !important; /* Add some padding back for the header */
+    padding-right: 1rem !important;
+    /* Keep existing top/bottom padding from .html-block */
   }
 }
 
 /* The .html-block padding and responsive padding rules for > 768px remain the same */
 /* .html-block { padding: 3rem 0 !important; ... } */
 /* @media (max-width: 1300px) { .html-block { padding-left: 2.5rem !important; ... } } */
-
 
 /* ABOUT TWO-COLUMN LAYOUT */
 
@@ -755,13 +755,12 @@ footer a:hover {
 /* Adjust padding for smaller mobile screens */
 @media (max-width: 768px) {
   .html-block .col.content-col {
-      padding: 0 1rem; /* Adjust padding for smaller mobile screens */
+    padding: 0 1rem; /* Adjust padding for smaller mobile screens */
   }
   /* Ensure text is left-aligned in content column on mobile */
   /* This is already handled by the general mobile rule for .content-col */
   /* .html-block .col.content-col { text-align: left; } */
 }
-
 
 .down-arrow-img {
   max-width: 20%; /* Constraint size */
@@ -769,8 +768,6 @@ footer a:hover {
   display: block; /* Allows margin: auto for centering */
   margin: 2rem auto; /* Center horizontally and add vertical space */
 }
-
-
 
 /* Update the w-66-desktop utility class */
 .w-66-desktop {
@@ -781,22 +778,20 @@ footer a:hover {
 /* Mobile adjustment for w-66-desktop remains the same */
 @media (max-width: 768px) {
   .w-66-desktop {
-      max-width: 100%; /* Full width on mobile */
+    max-width: 100%; /* Full width on mobile */
   }
 }
 
-
-
 /* Styling for the Mission points block */
 .mission-points-list {
-margin-top: 1.5rem; /* Space above the list */
+  margin-top: 1.5rem; /* Space above the list */
 }
 
 /* Wrapper for each individual mission point text block */
 .mission-point-wrapper {
-position: relative; /* Needed for absolute positioning of the pseudo-element */
-padding:2rem 1rem;
-/* The padding-left for the text content will be applied to the <p> inside */
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  padding: 2rem 1rem;
+  /* The padding-left for the text content will be applied to the <p> inside */
 }
 
 /* Remove bottom margin from the last mission point wrapper */
@@ -804,10 +799,9 @@ padding:2rem 1rem;
   margin-bottom: 0;
 }
 
-
 /* The blue left bar - applied to the wrapper */
 .mission-point-wrapper::before {
-  content: ''; /* Required for pseudo-elements */
+  content: ""; /* Required for pseudo-elements */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -827,29 +821,27 @@ padding:2rem 1rem;
   margin-bottom: 0; /* Remove default paragraph bottom margin within the wrapper */
 }
 
-
 /* Color for the bold text (ADVOCACY, EDUCATION, MENTORSHIP) */
 /* Target strong tags specifically within the mission points list */
 .mission-points-list strong {
   color: var(--clr-accent-400); /* Main blue color */
 }
 
-
 /* Adjustments for mobile */
 @media (max-width: 768px) {
-   .mission-points-list {
-      margin-top: 1rem; /* Adjust margin on mobile */
-   }
-   .mission-point-wrapper {
-      margin-bottom: 0.75rem; /* Adjust space between points on mobile */
-   }
-   .mission-point-wrapper::before {
-       display: none; /* Hide the blue bar on mobile */
-   }
-   .mission-point-wrapper p {
-      padding-left: 0; /* Remove left padding on mobile */
-   }
-   /* Bold text color remains the same */
+  .mission-points-list {
+    margin-top: 1rem; /* Adjust margin on mobile */
+  }
+  .mission-point-wrapper {
+    margin-bottom: 0.75rem; /* Adjust space between points on mobile */
+  }
+  .mission-point-wrapper::before {
+    display: none; /* Hide the blue bar on mobile */
+  }
+  .mission-point-wrapper p {
+    padding-left: 0; /* Remove left padding on mobile */
+  }
+  /* Bold text color remains the same */
 }
 
 /* AVANCE IN THE NEWS GRID STYLES */
@@ -861,9 +853,9 @@ padding:2rem 1rem;
 
 .html-block .news-item {
   background-color: var(--clr-primary-100);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
-  overflow: hidden; 
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -876,10 +868,10 @@ padding:2rem 1rem;
 /* For direct image thumbnails */
 .html-block .news-item-image {
   width: 100%;
-  height: auto; 
+  height: auto;
   display: block;
-  aspect-ratio: 16/9; 
-  object-fit: cover; 
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 /* For iframe/script embeds */
@@ -893,7 +885,8 @@ padding:2rem 1rem;
 }
 
 .html-block .news-item-embed-container iframe,
-.html-block .news-item-embed-container > div { /* Targeting div created by NBC script */
+.html-block .news-item-embed-container > div {
+  /* Targeting div created by NBC script */
   position: absolute;
   top: 0;
   left: 0;
@@ -904,34 +897,33 @@ padding:2rem 1rem;
 
 /* Wrapper for the clickable thumbnail link (Item 2) */
 .html-block .news-item-thumbnail-link-wrapper {
-  display: block; 
-  position: relative; 
-  line-height: 0; 
+  display: block;
+  position: relative;
+  line-height: 0;
 }
-
 
 .html-block .play-button-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px; 
+  width: 50px;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.55); 
+  background-color: rgba(0, 0, 0, 0.55);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  z-index: 10; 
+  z-index: 10;
 }
 .html-block .play-button-overlay:hover {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
 /* Link wrapper for play button, useful if the embed itself isn't directly clickable or needs an explicit trigger */
-.html-block .play-button-overlay-link { 
+.html-block .play-button-overlay-link {
   position: absolute;
   top: 0;
   left: 0;
@@ -947,11 +939,10 @@ padding:2rem 1rem;
   transform: none; /* Reset transform */
 }
 
-
 .html-block .play-icon {
-  width: 40%; 
+  width: 40%;
   height: 40%;
-  fill: var(--clr-primary-100); 
+  fill: var(--clr-primary-100);
 }
 
 .html-block .news-item-video-title-overlay-top {
@@ -959,58 +950,58 @@ padding:2rem 1rem;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.65); 
+  background-color: rgba(0, 0, 0, 0.65);
   color: var(--clr-primary-100);
   padding: 0.4rem 0.8rem;
-  font-size: 0.8rem; 
+  font-size: 0.8rem;
   font-family: var(--ff-body);
   font-weight: 500;
   box-sizing: border-box;
   text-align: left;
-  z-index: 5; 
+  z-index: 5;
 }
 
 .html-block .news-item-content {
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .html-block .news-item-meta {
-  background-color: var(--clr-accent-400); 
-  color: var(--clr-primary-100); 
-  padding: 0.6rem 1.25rem; 
+  background-color: var(--clr-accent-400);
+  color: var(--clr-primary-100);
+  padding: 0.6rem 1.25rem;
   margin: 0 0 1rem 0;
   font-size: 1rem;
-  font-family: var(--ff-body); 
-  font-weight: bold; 
+  font-family: var(--ff-body);
+  font-weight: bold;
   line-height: 1.4;
   text-transform: uppercase;
 }
 
 .html-block .news-item-date,
 .html-block .news-item-source {
-  display: block; 
+  display: block;
 }
 
 .html-block .news-item-title {
   font-family: var(--ff-body);
   font-size: 1.4rem;
-  font-weight: bold; 
+  font-weight: bold;
   font-style: normal;
-  color: var(--clr-primary-900); 
+  color: var(--clr-primary-900);
   margin-bottom: 0.6rem;
   line-height: 1.35;
 }
 
 .html-block .news-item-description {
   font-family: var(--ff-body);
-  font-size: 0.9rem; 
-  color: #333333; 
+  font-size: 0.9rem;
+  color: #333333;
   line-height: 1.5;
   margin-bottom: 1.25rem;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .html-block .news-item-link.btn.btn-primary {
@@ -1045,13 +1036,13 @@ padding:2rem 1rem;
     margin: -1rem -1rem 0.75rem -1rem;
     font-size: 0.7rem;
   }
-   .html-block .news-item-title {
+  .html-block .news-item-title {
     font-size: 1rem;
   }
 }
 
-nav.navigation.post-navigation{
-  display: none !important
+nav.navigation.post-navigation {
+  display: none !important;
 }
 
 /* PUBLICATIONS GRID STYLES */
@@ -1063,7 +1054,7 @@ nav.navigation.post-navigation{
 
 .html-block .publication-item {
   background-color: var(--clr-primary-100);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   overflow: hidden;
   display: flex;
@@ -1129,7 +1120,7 @@ nav.navigation.post-navigation{
   .html-block .publications-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .html-block .publication-title {
     font-size: 1.1rem;
   }
@@ -1140,11 +1131,11 @@ nav.navigation.post-navigation{
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .html-block .publication-content {
     padding: 1rem;
   }
-  
+
   .html-block .publication-title {
     font-size: 1rem;
   }
@@ -1165,7 +1156,9 @@ nav.navigation.post-navigation{
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .html-block .event-row:hover {
@@ -1328,19 +1321,19 @@ nav.navigation.post-navigation{
   .html-block .event-date-column {
     padding: 1.5rem;
   }
-  
+
   .html-block .event-details-column {
     padding: 1.5rem 1.5rem 1.5rem 0;
   }
-  
+
   .html-block .event-title {
     font-size: 1.5rem;
   }
-  
+
   .html-block .event-month-day {
     font-size: 1.3rem;
   }
-  
+
   .html-block .event-time {
     font-size: 1rem;
   }
@@ -1351,7 +1344,7 @@ nav.navigation.post-navigation{
     flex-direction: column;
     gap: 0;
   }
-  
+
   .html-block .event-date-column {
     flex: 0 0 100%;
     max-width: 100%;
@@ -1359,29 +1352,29 @@ nav.navigation.post-navigation{
     align-items: center;
     text-align: center;
   }
-  
+
   .html-block .event-details-column {
     padding: 1.5rem;
   }
-  
+
   .html-block .event-date {
     margin-bottom: 1rem;
   }
-  
+
   .html-block .event-schedule-image {
     max-width: 80%;
     margin: 1rem auto 0;
   }
-  
+
   .html-block .event-title {
     text-align: center;
   }
-  
+
   .html-block .event-location,
   .html-block .event-registration {
     text-align: center;
   }
-  
+
   .html-block .event-cta {
     display: flex;
     justify-content: center;
@@ -1392,13 +1385,11 @@ nav.navigation.post-navigation{
 .html-block .contact-container,
 .contact-form-container,
 .contact-info {
-  
   display: flex;
   flex-direction: column;
-  padding-top:1.5rem;
-  max-width:700px;
-  text-wrap:balance;
-  
+  padding-top: 1.5rem;
+  max-width: 700px;
+  text-wrap: balance;
 }
 
 /* Contact Info Section */
@@ -1416,7 +1407,6 @@ nav.navigation.post-navigation{
 .html-block .contact-address {
   font-size: 1.1rem;
   line-height: 1.2;
-  
 }
 
 .html-block .contact-address p {
@@ -1545,7 +1535,7 @@ nav.navigation.post-navigation{
 .html-block .form-submit:hover,
 .html-block .contact-form input[type="submit"]:hover,
 .wpcf7 input[type="submit"]:hover {
-  background-color: #FFFFFF; /* Typo corrected */
+  background-color: #ffffff; /* Typo corrected */
   border: none; /* Ensure no border is added on hover */
 }
 
@@ -1621,17 +1611,32 @@ nav.navigation.post-navigation{
   .html-block .contact-form-wrapper {
     padding: 1.5rem;
   }
-  
+
   .html-block .form-row-split {
     flex-direction: column;
     gap: 1.25rem;
   }
-  
+
   .html-block .contact-heading {
     font-size: 1.5rem;
   }
-  
+
   .html-block .contact-form-heading {
     font-size: 1.5rem;
   }
+}
+
+.wp-block-button .wp-block-button__link,
+.wp-block-search .wp-block-search__button,
+body .wp-block-file .wp-block-file__button {
+  font-weight: 700;
+}
+
+h4,
+.entry-content h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  font-weight: 800;
+  text-wrap: balance;
 }
