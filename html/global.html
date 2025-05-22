@@ -1,0 +1,321 @@
+<!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-542HL4W2");
+  </script>
+  <!-- End Google Tag Manager -->
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S34ZS7T8L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+  
+    gtag("config", "G-2S34ZS7T8L");
+  </script>
+  
+  <style>
+    .h1-700-black-left {
+      text-wrap: balance;
+    }
+  </style>
+  
+  <style type="text/css">
+    /* Modal Background */
+    #emailModal {
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      
+    }
+  
+    /* Show Modal */
+    #emailModal.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    /* Modal Content */
+    #emailModal .modal-content {
+      background-color: #000000;
+      padding: 2rem;
+      border: 3px solid #0f80fd;
+      width: 90vw;
+      max-width: 600px;
+      box-sizing: border-box;
+      transition: transform 0.3s ease-in-out;
+      transform: scale(0.9);
+      position: relative;
+    }
+  
+    /* Show Animation */
+    #emailModal.show .modal-content {
+      transform: scale(1);
+    }
+  
+    /* Close Button */
+    #emailModal .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: #0f80fd;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  
+    #emailModal .close:hover,
+    #emailModal .close:focus {
+      color: white;
+      text-decoration: none;
+    }
+  
+    /* Form Fields */
+    #emailModal .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    #emailModal .field-form {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+  
+    /* Submit Button */
+    #emailModal .submit-button {
+      background-color: #0f80fd;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+  
+    #emailModal .submit-button:hover {
+      background-color: #0c6fd1;
+    }
+  
+    /* Webflow Success & Error Messages */
+    #emailModal .w-form-done,
+    #emailModal .w-form-fail {
+      display: none; /* Hidden by default, toggled in JS */
+      text-align: center;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  
+    #emailModal .w-form-done {
+      background-color: #28a745;
+      color: white;
+    }
+  
+    #emailModal .w-form-fail {
+      background-color: #dc3545;
+      color: white;
+    }
+  
+  /* Add this to your existing <style type="text/css"> block or a new one */
+  
+  /* Target the wrapper for general form styling if needed */
+  #emailModal #member365-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Example gap */
+  }
+  
+  /* Example: Styling input fields within the Member365 form */
+  #emailModal #member365-form-container input[type="text"],
+  #emailModal #member365-form-container input[type="email"],
+  #emailModal #member365-form-container input[type="tel"] /* Add other input types as needed */ {
+    width: 100%;
+    padding: 12px 15px; /* Your padding */
+    font-size: 16px;    /* Your font size */
+    border: 1px solid #555; /* Darker border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #222; /* Dark background for inputs */
+    color: #fff; /* Light text for inputs */
+  }
+  
+  #emailModal #member365-form-container input[type="text"]::placeholder,
+  #emailModal #member365-form-container input[type="email"]::placeholder {
+    color: #888; /* Placeholder text color */
+  }
+  
+  /* Example: Styling labels if Member365 uses them */
+  #emailModal #member365-form-container label {
+    color: #FFFFFF; /* Light color for labels */
+    margin-bottom: 5px;
+    display: block;
+    font-size:1.25rem;
+  }
+  
+  /* Example: Styling the submit button from Member365 */
+  /* You'll need to find the actual class or ID Member365 uses for its button */
+  #emailModal #member365-form-container input[type="submit"],
+  #emailModal #member365-form-container button[type="submit"],
+  #emailModal #member365-form-container input[type="button"],
+  #emailModal #member365-form-container button[type="button"] {
+    background-color: #0f80fd; /* Your button color */
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color color 0.2s;
+    width: 100%; /* Or auto, or a specific width */
+  }
+  
+  #emailModal #member365-form-container input[type="submit"]:hover,
+  #emailModal #member365-form-container button[type="submit"]:hover,
+  #emailModal #member365-form-container input[type="button"]:hover,
+  #emailModal #member365-form-container button[type="button"]:hover {
+    background-color: #FFFFFF; /* Your button hover color */
+    color: var(--clr-primary-900);
+  }
+  
+  /* Style the Member365 success message if needed, though it has its own span */
+  /* You might want to ensure its styling matches your modal better */
+  #emailModal .successMessage_462c602248703b31dc5be262efb13d6b839bd3d5 {
+      background-color: #28a745; /* Green for success */
+      color: white;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+      /* display: none; is already set inline by Member365 snippet, their JS will show it */
+  }
+  
+  /* If Member365 has its own error messages, inspect and style them too */
+  #emailModal #member365-form-container .member365-error-class { /* Fictional error class */
+      background-color: #dc3545;
+      color: white;
+      /* ... other styles ... */
+  }
+  
+  
+  
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      //console.log("🚀 Email modal script loaded!");
+  
+      const modalHTML = `
+          <div id="emailModal" class="modal" style="display: none">
+            <div class="modal-content">
+              <span class="close">×</span>
+              <h3 style="color: var(--clr-accent-400) !important">Join Our Mailing List</h3>
+              <div id="member365-form-container" class="form-block">
+                  <span class="relatedTo_462c602248703b31dc5be262efb13d6b839bd3d5" style="display: none;"></span>
+                  <span class="successMessage_462c602248703b31dc5be262efb13d6b839bd3d5" style="display: none; background-color: #28a745; color: white; padding: 10px; text-align: center; margin-top: 10px; border-radius: 5px;">Thank-you!</span>
+                  <span id="optin_462c602248703b31dc5be262efb13d6b839bd3d5">
+                      <p style="color: #ccc; text-align: center;">Loading sign-up form...</p>
+                  </span>
+              </div>
+            </div>
+          </div>`;
+  
+      document.body.insertAdjacentHTML("beforeend", modalHTML);
+  
+      // --- START: Member365 Form Loading Script ---
+      // Ensure jQuery is loaded before this point
+      // The original snippet had jQuery(document).ready, but since we're inside DOMContentLoaded
+      // and the target span is created right before this, we can call it directly.
+      // If you encounter issues, you can wrap it in $(function() { ... });
+      $.get("https://avancesports.member365.org/public/listbuilder/getOptin/1/462c602248703b31dc5be262efb13d6b839bd3d5", function (data) {
+          $("#optin_462c602248703b31dc5be262efb13d6b839bd3d5").html(data);
+          // After the form is loaded, you might want to re-apply any dynamic styling or event listeners
+          // if the Member365 form elements need it and aren't styled by the CSS below.
+      }).fail(function() {
+          $("#optin_462c602248703b31dc5be262efb13d6b839bd3d5").html("<p style='color: #dc3545; text-align: center;'>Could not load the sign-up form. Please try again later.</p>");
+      });
+      // --- END: Member365 Form Loading Script ---
+  
+      const footerButton = document.getElementById("emailModalTriggerButton");
+      if (footerButton) {
+          footerButton.addEventListener("click", function () {
+              openEmailModal();
+          });
+      }
+  
+      const modal = document.getElementById("emailModal");
+      // const form = document.getElementById("emailCaptureForm"); // OLD - REMOVE
+      // const successMessage = modal.querySelector(".w-form-done"); // OLD - REMOVE
+      // const errorMessage = modal.querySelector(".w-form-fail");   // OLD - REMOVE
+  
+      function openEmailModal() {
+        modal.style.display = "flex";
+        setTimeout(() => modal.classList.add("show"), 10);
+      }
+      window.openEmailModal = openEmailModal;
+  
+      function closeEmailModal() {
+        modal.classList.remove("show");
+        setTimeout(() => {
+          modal.style.display = "none";
+          // Potentially reset the Member365 form or clear its success message here if needed,
+          // though Member365 might handle this itself.
+          // Example: $(".successMessage_462c602248703b31dc5be262efb13d6b839bd3d5").hide();
+          //          $("#optin_462c602248703b31dc5be262efb13d6b839bd3d5").empty().append('<p style="color: #ccc; text-align: center;">Loading sign-up form...</p>');
+          //          // And then re-trigger the $.get if you want it to reload fresh next time
+        }, 300);
+      }
+  
+      // -- START: Disable Automatic Popup Logic -- (Keep this as is)
+      /*
+      if (localStorage.getItem("emailSubscribed")) {
+        return;
+      }
+      if (!sessionStorage.getItem("emailModalShown")) {
+        setTimeout(() => {
+          openEmailModal();
+          sessionStorage.setItem("emailModalShown", "true");
+        }, 8000);
+      }
+      */
+      // -- END: Disable Automatic Popup Logic --
+  
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal || event.target.classList.contains("close")) {
+          closeEmailModal();
+        }
+      });
+  
+      // REMOVE THE OLD form.addEventListener("submit", ...) block
+      // REMOVE showSuccessMessage() and showErrorMessage() functions
+  
+    });
+  </script>

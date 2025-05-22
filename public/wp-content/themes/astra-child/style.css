@@ -674,6 +674,9 @@ footer a:hover {
   display: block;
   margin: 0 auto;
   flex-shrink: 0; /* prevent image from shrinking */
+}
+
+.bod-hover:hover {
   cursor: pointer;
 }
 
