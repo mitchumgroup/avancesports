@@ -32,9 +32,18 @@ body {
   padding: 4rem 0 !important; /* Top/Bottom padding */
 }
 
+.html-block-slim {
+  padding: 2rem 2.5rem 1rem 2.5rem !important; /* Top/Bottom padding */
+}
+
+.html-block-slim .entry-content h1 {
+  margin-top: 0 !important;
+}
+
 /* ≤ 1300px: Reduce left/right padding */
 @media (max-width: 1300px) {
-  .html-block {
+  .html-block,
+  .html-block-slim {
     padding-left: 2.5rem !important;
     padding-right: 2.5rem !important;
   }
@@ -42,7 +51,8 @@ body {
 
 /* ≤ 768px (mobile): Tighter left/right padding */
 @media (max-width: 768px) {
-  .html-block {
+  .html-block,
+  .html-block-slim {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -458,9 +468,11 @@ footer a:hover {
 /* PAGE HEADER BACKGROUND */
 /* Apply this class to the Spectra Container block */
 .page-header-bg {
+  background-size: cover;
   background-image: url('/wp-content/uploads/2025/05/header-bg-blue.jpg');
-  background-size: 100% auto; /* Scale to 100% width, auto height (clips vertically) */
+  /*background-size: 100% auto; /* Scale to 100% width, auto height (clips vertically) */
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center center;
   /* Removed min-height: 500px; Height is now determined by content + padding */
   width: 100%; /* Should be handled by Spectra Full-Width setting */
@@ -596,4 +608,206 @@ padding:2rem 1rem;
       padding-left: 0; /* Remove left padding on mobile */
    }
    /* Bold text color remains the same */
+}
+
+/* AVANCE IN THE NEWS GRID STYLES */
+.html-block .news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.html-block .news-item {
+  background-color: var(--clr-primary-100);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 4px;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+}
+
+.html-block .news-item-thumbnail-wrapper {
+  position: relative;
+  background-color: var(--clr-primary-900);
+}
+
+/* For direct image thumbnails */
+.html-block .news-item-image {
+  width: 100%;
+  height: auto; 
+  display: block;
+  aspect-ratio: 16/9; 
+  object-fit: cover; 
+}
+
+/* For iframe/script embeds */
+.html-block .news-item-embed-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  background-color: #000; /* Fallback background */
+}
+
+.html-block .news-item-embed-container iframe,
+.html-block .news-item-embed-container > div { /* Targeting div created by NBC script */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Wrapper for the clickable thumbnail link (Item 2) */
+.html-block .news-item-thumbnail-link-wrapper {
+  display: block; 
+  position: relative; 
+  line-height: 0; 
+}
+
+
+.html-block .play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px; 
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.55); 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 10; 
+}
+.html-block .play-button-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Link wrapper for play button, useful if the embed itself isn't directly clickable or needs an explicit trigger */
+.html-block .play-button-overlay-link { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Ensure it is above the embed */
+}
+.html-block .play-button-overlay-link .play-button-overlay {
+  position: static; /* Reset absolute if play button is child of this link */
+  transform: none; /* Reset transform */
+}
+
+
+.html-block .play-icon {
+  width: 40%; 
+  height: 40%;
+  fill: var(--clr-primary-100); 
+}
+
+.html-block .news-item-video-title-overlay-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65); 
+  color: var(--clr-primary-100);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem; 
+  font-family: var(--ff-body);
+  font-weight: 500;
+  box-sizing: border-box;
+  text-align: left;
+  z-index: 5; 
+}
+
+.html-block .news-item-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.html-block .news-item-meta {
+  background-color: var(--clr-accent-400); 
+  color: var(--clr-primary-100); 
+  padding: 0.6rem 1.25rem; 
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-family: var(--ff-body); 
+  font-weight: bold; 
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.html-block .news-item-date,
+.html-block .news-item-source {
+  display: block; 
+}
+
+.html-block .news-item-title {
+  font-family: var(--ff-body);
+  font-size: 1.4rem;
+  font-weight: bold; 
+  font-style: normal;
+  color: var(--clr-primary-900); 
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+}
+
+.html-block .news-item-description {
+  font-family: var(--ff-body);
+  font-size: 0.9rem; 
+  color: #333333; 
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1; 
+}
+
+.html-block .news-item-link.btn.btn-primary {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .html-block .news-item-title {
+    font-size: 1.05rem;
+  }
+  .html-block .news-item-description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .html-block .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .html-block .news-item-content {
+    padding: 1rem;
+  }
+  .html-block .news-item-meta {
+    padding: 0.5rem 1rem;
+    margin: -1rem -1rem 0.75rem -1rem;
+    font-size: 0.7rem;
+  }
+   .html-block .news-item-title {
+    font-size: 1rem;
+  }
+}
+
+nav.navigation.post-navigation{
+  display: none !important
 }

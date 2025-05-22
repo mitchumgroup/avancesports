@@ -1,0 +1,382 @@
+<!-- START OF ADVISORY BOARD AND MODAL BLOCK -->
+<div class="html-block"> <!-- Master wrapper for this entire block -->
+
+    <style type="text/css">
+    /* Modal Background */
+    .html-block .modal {
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none; /* Hide modal initially */
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+        opacity: 0; /* Start transparent for fade-in */
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    /* Modal Content */
+    .html-block .modal-content {
+        background-color: #000000;
+        padding: 1rem;
+        border: 3px solid #0f80fd;
+        width: 90vw;
+        max-width: 850px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .html-block .modal-header {
+        padding: 1rem 1rem 1.5rem 1rem;
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+    
+    .html-block .modal-body {
+        padding: 10px;
+        min-height:25vh;
+        max-height: 50vh;
+        overflow-y: scroll;
+        color: #000000;
+        background-color:#FFFFFF;
+    }
+    
+    /* Close Button */
+    .html-block .close {
+        color: #0f80fd;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .html-block .close:hover,
+    .html-block .close:focus {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    /* Fade-in and Fade-out Transitions */
+    .html-block .modal.show {
+        opacity: 1;
+    }
+    
+    .html-block .ateam-name{
+    font-family:montserrat; 
+    font-size:1.25rem;
+    color:#FFFFFF;
+    font-weight:700;
+    text-transform:uppercase;
+    }
+    
+    .html-block .ateam-title{
+    font-family:montserrat; 
+    font-size:1.1rem;
+    color:#FFFFFF;
+    font-weight:500;
+    font-style:italic;
+    }
+    
+    .html-block .ateam-bio{
+    font-family:montserrat; 
+    font-size:0.95rem;
+    color:#000000;
+    font-weight:400;
+    padding:1rem;
+    }
+    </style>
+    
+    <!-- ADVISORY COUNCIL CONTENT -->
+    <div> 
+        <div class="center fc-primary-100 mb-6">
+          <h2 class="no-margin-bottom fc-primary-100 center">ADVISORY COUNCIL</h2>
+          <h3 class="fc-primary-100 subhead fw-500 center ff-secondary">
+            Guiding the Future of Latino Excellence in Sports
+          </h3>
+        </div>
+    
+        <div class="bod-grid">
+    
+          <div class="bod-advisor" data-person-name="lisa-guerrero">
+            <img
+              class="bod-image"
+              src="/wp-content/uploads/2025/05/lisa-guerrero.jpg"
+              alt="Lisa Guerrero"
+            />
+            <div class="bod-content">
+              <h3 class="fc-primary-100 fw-500 ff-secondary text-uppercase center subhead mb-1">Lisa Guerrero</h3>
+              <p class="center">
+                <strong>Advisory Council Member</strong><br />
+                Best-selling author, journalist, Co-host of the Best Damn Sports Show Period and first-ever female sideline reporter for Monday Night Football
+              </p>
+            </div>
+          </div>
+    
+          <div class="bod-advisor" data-person-name="omar-minaya">
+            <img
+              class="bod-image"
+              src="/wp-content/uploads/2025/05/omar-minaya.jpg"
+              alt="Omar Minaya"
+            />
+            <div class="bod-content">
+              <h3 class="fc-primary-100 fw-500 ff-secondary text-uppercase center subhead mb-1">Omar Minaya</h3>
+              <p class="center">
+                <strong>Advisory Council Member</strong><br />
+                Senior Advisor to Baseball Operations for the New York Yankees; First Latino General Manager of an MLB Franchise (Montreal Expos)
+              </p>
+            </div>
+          </div>
+    
+          <div class="bod-advisor" data-person-name="earl-watson">
+            <img
+              class="bod-image"
+              src="/wp-content/uploads/2025/05/earl-watson.jpg"
+              alt="Earl Watson"
+            />
+            <div class="bod-content">
+              <h3 class="fc-primary-100 fw-500 ff-secondary text-uppercase center subhead mb-1">Earl Watson</h3>
+              <p class="center">
+                <strong>Advisory Council Member</strong><br />
+                Former NBA Head Coach; First Latino Head Coach of an NBA Franchise (Phoenix Suns)
+              </p>
+            </div>
+          </div>
+    
+          <div class="bod-advisor" data-person-name="nely-galan">
+            <img
+              class="bod-image"
+              src="/wp-content/uploads/2025/05/nely-galan.jpg"
+              alt="Nely Galan"
+            />
+            <div class="bod-content">
+              <h3 class="fc-primary-100 fw-500 ff-secondary text-uppercase center subhead mb-1">Nely Galan</h3>
+              <p class="center">
+                <strong>Advisory Council Member</strong><br />
+                Self-made media mogul and author who launched ESPN Latin America; Co-Founder of the ProXimo conference presented by AVANCE Global
+              </p>
+            </div>
+          </div>
+    
+          <div class="bod-advisor" data-person-name="gersson-rosas">
+            <img
+              class="bod-image"
+              src="/wp-content/uploads/2025/05/gersson-rosas.jpg"
+              alt="Gersson Rosas"
+            />
+            <div class="bod-content">
+              <h3 class="fc-primary-100 fw-500 ff-secondary text-uppercase center subhead mb-1">Gersson Rosas</h3>
+              <p class="center">
+                <strong>Advisory Council Member</strong><br />
+                Senior Vice President of Basketball Operations for the New York Knicks; First Latino General Manager of an NBA Franchise (Dallas Mavericks)
+              </p>
+            </div>
+          </div>
+    
+          <div class="bod-advisor" data-person-name="josue-napa">
+            <img
+              class="bod-image"
+              src="/wp-content/uploads/2025/05/josue-napa.jpg"
+              alt="Josue Napa"
+            />
+            <div class="bod-content">
+              <h3 class="fc-primary-100 fw-500 ff-secondary text-uppercase center subhead mb-1">Josue Napa</h3>
+              <p class="center">
+                <strong>Advisory Council Member</strong><br />
+                Senior Vice President and Head of Finance and Accounting for the Brooklyn Nets (NBA)
+              </p>
+            </div>
+          </div>
+    
+          <div class="bod-advisor" data-person-name="ron-rivera">
+            <img
+              class="bod-image"
+              src="/wp-content/uploads/2025/05/ron-rivera.jpg"
+              alt="Ron Rivera"
+            />
+            <div class="bod-content">
+              <h3 class="fc-primary-100 fw-500 ff-secondary text-uppercase center subhead mb-1">Ron Rivera</h3>
+              <p class="center">
+                <strong>Advisory Council Member</strong><br />
+                Former NFL Head Coach; First Latino Head Coach of an NFL Franchise (Washington Commanders)
+              </p>
+            </div>
+          </div>
+    
+        </div>
+    </div> 
+
+    <!-- MODAL HTML (NOW INSIDE .html-block) -->
+    <div id="modal-staff" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-staff')">×</span>
+            <div class="modal-header">
+                <h2 class="ateam-name"></h2>
+                <h3 class="ateam-title"></h3>
+            </div>
+            <div class="modal-body">
+                <p class="ateam-bio"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const advisorData = [
+            {
+                slug: "lisa-guerrero",
+                name: "Lisa Guerrero",
+                title: "Former ABC, CBS, and FOX journalist, ESPN anchor and reporter.",
+                bio: "Award-winning journalist Lisa Guerrero is one of the most popular and hard-working personalities on television. As the chief investigative correspondent for INSIDE EDITION. Guerrero spent over a decade as a nationally recognized sports reporter on CBS, Fox, ABC and ESPN, having anchored and reported for dozens of shows including the wildly popular 'The Best Damn Sports Show Period.' She has interviewed hundreds of athletes, including Alex Rodriguez, Kobe Bryant, Brett Favre and Mia Hamm."
+            },
+            {
+                slug: "omar-minaya",
+                name: "Omar Minaya",
+                title: "Senior Advisor to Baseball Operations, New York Yankees",
+                bio: "Pioneering baseball executive who became MLB’s first Hispanic General Manager with the Montreal Expos (2002-2004). Born in the Dominican Republic and raised in Queens, NY, he started as an assistant GM for the New York Mets (1998-2001) and later became their GM in 2004. Minaya has held various roles, including senior VP of baseball operations for the San Diego Padres, analyst for MLB.com, and assistant to the GM for the Mets. In 2023, he joined the New York Yankees as a senior advisor for baseball operations. His extensive experience and groundbreaking career enhance AVANCE’s Board of Directors, promoting opportunities for Latinos in sports."
+            },
+            {
+                slug: "earl-watson",
+                name: "Earl Watson",
+                title: "Former NBA Head Coach and Assistant Coach (NBA), NBATV Analyst",
+                bio: "Earl Watson is a distinguished basketball figure known for his impactful career as both a player and a coach. After a 13-year playing career, he began coaching in 2014 with the Austin Spurs of the NBA D-League. Watson quickly rose through the coaching ranks, becoming an assistant coach for the Phoenix Suns and currently serving as an assistant coach for the Toronto Raptors. He has also worked as an analyst for NBA TV and the Pac-12 Network. Watson’s passion for the game and dedication to excellence continue to inspire others through his leadership and mentorship."
+            },
+            {
+                slug: "nely-galan",
+                name: "Nely Galan",
+                title: "Author, Advocate and Entrepreneur who launched ESPN Latin America",
+                bio: "Self-made media mogul. She was the first Latina President of Entertainment for a U.S. television network, Telemundo, an Emmy Award winning producer of over 700 television shows in English and Spanish, and the founder of The Adelante Movement to empower and train Latina and multicultural women entrepreneurs. Her entrepreneurship for women manifesto, SELF MADE, is a New York Times Best Selling book written in English, Spanish and Mandarin. Galan has a masters and doctorate in Clinical Psychology with an emphasis on the psychology of money."
+            },
+            {
+                slug: "gersson-rosas",
+                name: "Gersson Rosas",
+                title: "Senior Vice President, Basketball, New York Knicks",
+                bio: "Gersson Rosas is the Senior Vice President of Basketball Operations for the New York Knicks. Rosas was the first Latino in the NBA to hold the positions of President of Basketball Operations and General Manager while at the Minnesota Timberwolves and the Dallas Mavericks. He previously served as Executive Vice President of Basketball Operations for the Houston Rockets. Rosas was a member of the 2016 USA Men’s Basketball Olympic gold-medal winning team as Head Scout/International Player Personnel. Rosas’ expertise in team management, player development, and strategic planning, along with his commitment to diversity and inclusion, make him a vital member of AVANCE’s Board of Directors, promoting professional and economic opportunities for Latinos in sports."
+            },
+            {
+                slug: "josue-napa",
+                name: "Josue Napa",
+                title: "Senior Vice President & Head of Finance for the Brooklyn Nets",
+                bio: "As Senior Vice President and Head of Finance and Accounting for the Brooklyn Nets, Josue Napa oversees all financial operations for the NBA franchise and its affiliates, including the Long Island Nets, Nets Gaming Crew, and Nets & NY Liberty Foundation. With a career marked by leadership through multiple ownership transitions, Josue is a key leader in the league, excelling in ownership transactions, league reporting, budget and forecasting, and capital planning."
+            },
+            {
+                slug: "ron-rivera",
+                name: "Ron Rivera",
+                title: "Former NFL Head Coach; First Latino Head Coach of an NFL Franchise (Washington Commanders)",
+                bio: "Bio coming soon. Ron Rivera is recognized for his impactful career as an NFL head coach, notably being the first Latino head coach for the Washington Commanders franchise." 
+            }
+        ];
+    
+        function showBio(personNameSlug) {
+            console.log("showBio called with slug:", personNameSlug);
+            const advisor = advisorData.find(a => a.slug === personNameSlug);
+            if (advisor) {
+                const modalElement = document.getElementById('modal-staff');
+                if (!modalElement) {
+                    console.error("Modal element #modal-staff not found!");
+                    return;
+                }
+
+                modalElement.querySelector('.ateam-name').textContent = advisor.name;
+                modalElement.querySelector('.ateam-title').textContent = advisor.title;
+                modalElement.querySelector('.ateam-bio').textContent = advisor.bio;
+    
+                openModal('modal-staff');
+            } else {
+                console.error("Advisor with slug '" + personNameSlug + "' not found in advisorData.");
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("SCRIPT: DOMContentLoaded fired.");
+            
+            let currentBlock = null;
+            const allHtmlBlocks = document.querySelectorAll('.html-block');
+            const uniqueScriptString = 'const advisorData = ['; // A string unique to this script
+
+            for (let i = 0; i < allHtmlBlocks.length; i++) {
+                const block = allHtmlBlocks[i];
+                const scriptsInBlock = block.getElementsByTagName('script');
+                for (let j = 0; j < scriptsInBlock.length; j++) {
+                    if (scriptsInBlock[j].textContent.includes(uniqueScriptString)) {
+                        currentBlock = block;
+                        console.log("SCRIPT: Found target .html-block containing this script:", currentBlock);
+                        break; 
+                    }
+                }
+                if (currentBlock) break; 
+            }
+
+            if (!currentBlock) {
+                console.error("SCRIPT: Could not find the specific .html-block that contains this script. Listeners might not be attached correctly. Ensure the script is inside an .html-block and contains the string: '" + uniqueScriptString + "'");
+                // As a last resort, if only one .html-block exists, use it.
+                if (allHtmlBlocks.length === 1) {
+                    console.warn("SCRIPT: Falling back to using the only .html-block found on the page.");
+                    currentBlock = allHtmlBlocks[0];
+                } else if (allHtmlBlocks.length > 0) {
+                     console.warn("SCRIPT: Multiple .html-block elements found, but none specifically identified as containing this script. Falling back to the first one. This might be incorrect.");
+                     currentBlock = allHtmlBlocks[0]; // Or consider not proceeding if too ambiguous
+                } else {
+                    console.error("SCRIPT: No .html-block elements found on the page at all.");
+                    return; // Cannot proceed
+                }
+            }
+            
+            const advisors = currentBlock.querySelectorAll('.bod-advisor');
+            console.log("SCRIPT: Found " + advisors.length + " '.bod-advisor' elements in the targeted block.");
+
+            if (advisors.length === 0) {
+                console.warn("SCRIPT: No '.bod-advisor' elements found to attach listeners to. Check HTML structure within the identified .html-block.");
+            }
+
+            advisors.forEach(function(element) {
+                console.log("SCRIPT: Attaching click listener to advisor:", element.dataset.personName, element);
+                element.addEventListener('click', function() {
+                    // 'this' refers to the clicked 'element' (.bod-advisor)
+                    const personNameSlug = this.dataset.personName; 
+                    console.log("EVENT: Click detected on advisor:", personNameSlug);
+                    if (personNameSlug) {
+                        showBio(personNameSlug);
+                    } else {
+                        console.warn("EVENT: Clicked element is missing 'data-person-name' attribute:", this);
+                    }
+                });
+            });
+        });
+    
+        function openModal(modalId) {
+            console.log("MODAL: Opening modal:", modalId);
+            const modal = document.getElementById(modalId);
+            if (!modal) {
+                console.error("MODAL: Modal element #" + modalId + " not found!");
+                return;
+            }
+            modal.style.display = 'flex'; 
+            setTimeout(() => { 
+                modal.classList.add('show'); 
+            }, 10); 
+    
+            const clickOutsideHandler = function(event) {
+                if (event.target === modal) {
+                    closeModal(modalId);
+                    modal.removeEventListener('click', clickOutsideHandler); 
+                }
+            };
+            modal.addEventListener('click', clickOutsideHandler);
+        }
+    
+        // Ensure closeModal is globally accessible for the inline onclick
+        window.closeModal = function(modalId) {
+            console.log("MODAL: Closing modal:", modalId);
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('show'); 
+                setTimeout(() => {
+                    modal.style.display = 'none'; 
+                }, 300); 
+            }
+        }
+    </script>
+    
+</div> <!-- END OF .html-block -->
+<!-- END OF ADVISORY BOARD AND MODAL BLOCK -->
